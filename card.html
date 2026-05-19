@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="card-page">
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html" class="back-btn">← Back</a>
+        <span class="pokeball-icon">⬤</span>
+        <h1>Pokédex</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="card-detail-main">
+    <div id="card-detail" class="card-detail">
+      <div id="detail-loading" class="loading">Loading…</div>
+    </div>
+  </main>
+
+  <!-- Bot widget -->
+  <div id="bot-bubble" class="bot-bubble" title="Ask the Pokémon Professor!">
+    <span class="bot-avatar">🧑‍🔬</span>
+    <span class="bot-badge">?</span>
+  </div>
+
+  <div id="bot-chat" class="bot-chat hidden">
+    <div class="bot-chat-header">
+      <span>Prof. Oak's Assistant</span>
+      <button id="bot-close" class="bot-close">✕</button>
+    </div>
+    <div id="bot-messages" class="bot-messages">
+      <div class="bot-msg bot">Hello, Trainer! Ask me anything about this Pokémon.</div>
+    </div>
+    <div class="bot-input-row">
+      <input id="bot-input" type="text" placeholder="Ask about type, stats, moves…" autocomplete="off" />
+      <button id="bot-send">Send</button>
+    </div>
+  </div>
+
+  <script src="card.js"></script>
+</body>
+</html>

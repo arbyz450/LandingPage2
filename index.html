@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="pokeball-icon">⬤</span>
+        <h1>Pokédex</h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search Pokémon..." autocomplete="off" />
+      </div>
+      <div class="gen-filter">
+        <select id="gen-select">
+          <option value="1">Gen I (1–151)</option>
+          <option value="2">Gen II (152–251)</option>
+          <option value="3">Gen III (252–386)</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="card-grid" class="card-grid"></div>
+    <div id="loading" class="loading">Loading Pokémon…</div>
+  </main>
+
+  <script src="pokedex.js"></script>
+</body>
+</html>
