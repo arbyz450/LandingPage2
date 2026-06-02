@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokebot</title>
+  <link rel="stylesheet" href="pokebot.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="pokeball-spin"></div>
+      <span>Pokebot</span>
+    </div>
+
+    <div class="sidebar-search">
+      <input type="text" id="sidebar-search" placeholder="Search Pokémon…" autocomplete="off" />
+    </div>
+
+    <div class="sidebar-label">Shop Pokémon</div>
+    <div class="store-links">
+      <a class="store-link pokecenter" href="https://www.pokemoncenter.com/" target="_blank" rel="noopener">
+        <span class="store-icon">🛒</span>
+        <span class="store-name">Pokémon Center</span>
+        <span class="store-badge">Official</span>
+      </a>
+      <a class="store-link bestbuy" href="https://www.bestbuy.com/site/searchpage.jsp?st=pokemon" target="_blank" rel="noopener">
+        <span class="store-icon">🏷️</span>
+        <span class="store-name">Best Buy</span>
+      </a>
+      <a class="store-link target" href="https://www.target.com/s?searchTerm=pokemon+cards" target="_blank" rel="noopener">
+        <span class="store-icon">🎯</span>
+        <span class="store-name">Target</span>
+      </a>
+      <a class="store-link walmart" href="https://www.walmart.com/search?q=pokemon+cards" target="_blank" rel="noopener">
+        <span class="store-icon">⭐</span>
+        <span class="store-name">Walmart</span>
+      </a>
+    </div>
+
+    <div class="sidebar-label">Quick Lookup</div>
+    <div id="sidebar-list" class="sidebar-list"></div>
+
+    <div class="sidebar-footer">
+      <a href="index.html">← Back to Pokédex</a>
+    </div>
+  </aside>
+
+  <!-- Toggle for mobile -->
+  <button class="sidebar-toggle" id="sidebar-toggle" title="Toggle sidebar">☰</button>
+
+  <!-- Main chat area -->
+  <main class="main" id="main">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="pokeball-spin small"></div>
+        <h1>Pokebot</h1>
+        <span class="topbar-sub">Your Pokémon Assistant</span>
+      </div>
+      <div class="topbar-status">
+        <span class="status-dot"></span> Online
+      </div>
+    </header>
+
+    <!-- Pokemon info panel (shown when a Pokemon is selected) -->
+    <div id="info-panel" class="info-panel hidden">
+      <div id="info-content"></div>
+      <button id="info-close" class="info-close">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div class="messages-wrap">
+      <div id="messages" class="messages">
+        <div class="msg bot">
+          <img class="avatar" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="bot" />
+          <div class="bubble">
+            <strong>Pokebot</strong>
+            <p>Hey Trainer! 👋 I'm <strong>Pokebot</strong> — your personal Pokémon expert.<br/>
+            Ask me about any Pokémon, or type a name/number to look one up!<br/>
+            <em>Try: "Tell me about Charizard" or "Who has the highest speed?"</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggested prompts -->
+    <div class="suggestions" id="suggestions">
+      <button class="chip" data-q="What type is Pikachu?">What type is Pikachu?</button>
+      <button class="chip" data-q="Show me Charizard's stats">Charizard stats</button>
+      <button class="chip" data-q="How does Eevee evolve?">Eevee evolutions</button>
+      <button class="chip" data-q="What moves does Mewtwo learn?">Mewtwo moves</button>
+      <button class="chip" data-q="Who is the strongest Pokémon?">Strongest Pokémon?</button>
+    </div>
+
+    <!-- Input bar -->
+    <div class="input-bar">
+      <div class="input-inner">
+        <input id="chat-input" type="text"
+          placeholder="Ask about any Pokémon…" autocomplete="off" />
+        <button id="send-btn" class="send-btn" title="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+      <p class="input-hint">Powered by PokéAPI · Press Enter to send</p>
+    </div>
+  </main>
+
+  <script src="pokebot.js"></script>
+</body>
+</html>
