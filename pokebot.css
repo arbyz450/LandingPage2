@@ -104,6 +104,14 @@ body { display: flex; }
   background: var(--yellow); color: #111; font-weight: 800;
 }
 
+/* ── Restock alert links ─────────────────────────────── */
+.store-link.alert { border-color: #ffd60a; }
+.store-link.alert:hover { background: rgba(255,214,10,.15); }
+.alert-note {
+  padding: .15rem 1rem .5rem; font-size: .68rem;
+  color: var(--sub); line-height: 1.4; font-style: italic;
+}
+
 .sidebar-footer {
   padding: .75rem 1rem; border-top: 1px solid var(--border);
   font-size: .82rem;
